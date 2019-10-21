@@ -1,0 +1,43 @@
+#! /bin/bash
+
+# CLIRadio - um script simples para tocar radios online.
+# cfbastarz@gmail.com
+
+command -v mplayer
+if [ $? -ne 0 ]
+then
+
+  echo "mplayer não encontrado!"
+  exit 1
+
+else
+
+  mplayer=$(which mplayer)
+
+  select radio in 89fm jovenpam sair
+  do
+
+    if [ ${radio} == "sair" ]
+    then
+
+      exit 0 
+
+    elif [ ${radio} == "89fm" ]
+    then
+
+      ${mplayer} http://streamingv2.shoutcast.com/89fm-sp
+
+    elif [ ${radio} == "jovenpam" ]
+    then
+
+      ${mplayer} http://playerservices.streamtheworld.com/api/livestream-redirect/JP_SP_FMAAC.aac
+
+    else
+
+      echo "Rádio não disponível."
+
+    fi
+
+  done
+
+fi
