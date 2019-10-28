@@ -8,15 +8,15 @@ Instale o mplayer no seu computador:
 
 ### Debian e derivados
 
-  sudo apt install mplayer
+    sudo apt install mplayer
 
 ### Fedora e derivados
 
-  sudo dnf install mplayer
+    sudo dnf install mplayer
 
 ### Mac OS X (brew)
 
-  brew install mplayer
+    brew install mplayer
 
 ## Uso
 
