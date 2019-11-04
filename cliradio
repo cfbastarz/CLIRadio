@@ -14,7 +14,7 @@ else
 
   mplayer=$(which mplayer)
 
-  select radio in 89fm jovenpam sair
+  select radio in 89fm jovenpam bandeirantes sair
   do
 
     if [ ${radio} == "sair" ]
@@ -31,6 +31,11 @@ else
     then
 
       ${mplayer} http://playerservices.streamtheworld.com/api/livestream-redirect/JP_SP_FMAAC.aac
+
+    elif [ ${radio} == "bandeirantes" ]
+    then
+
+      ${mplayer} http://evpp.mm.uol.com.br/band/radiobandeirantes_sp/playlist.m3u8
 
     else
 
